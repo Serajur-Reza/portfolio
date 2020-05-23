@@ -1,0 +1,41 @@
+/* #navigation li a{
+	margin-left: 20px;
+} */
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#home, #about, #skills, #projects, #blogs{
+	margin: 100px;
+}
+
+#home{
+	text-align: center;
+	line-height: 2;
+}
+
+.home h1, #about h1{
+	font-weight: 700;
+}
+
+
+#about{
+	line-height: 2;
+}
+
+
+#about img{
+	max-width: 300px;
+	max-height: 300px;
+	margin-left: 100px;
+}
+
+#skills li{
+	color: white;
+}
+
+#projects p{
+	text-align: justify;
+}
