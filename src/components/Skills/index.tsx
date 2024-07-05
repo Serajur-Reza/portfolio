@@ -19,7 +19,7 @@ const Skills = () => {
                 Redux, React Query, NextJs
               </p> */}
               <ul className="text-lg">
-                {skills?.data?.data[0] &&
+                {skills?.data?.data &&
                   skills?.data?.data[0]?.core?.map((item: any) => (
                     <li>{item}</li>
                   ))}
@@ -29,7 +29,7 @@ const Skills = () => {
               {" "}
               <h1 className="text-xl">Moderate Skills </h1>
               <ul className="text-lg">
-                {skills?.data?.data[0] &&
+                {skills?.data?.data &&
                   skills?.data?.data[0]?.moderate?.map((item: any) => (
                     <li>{item}</li>
                   ))}
