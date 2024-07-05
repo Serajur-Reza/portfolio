@@ -1,4 +1,7 @@
+import { useGetSkills } from "../../queryHooks/skills/useGetSkills";
+
 const Skills = () => {
+  const { data: skills } = useGetSkills();
   return (
     <>
       <div className="container mx-auto px-4 my-8 animate-fade">
@@ -7,25 +10,31 @@ const Skills = () => {
         </div>
 
         <div className="mt-5  text-justify">
-          <div className="flex">
-            {" "}
-            <h1 className="text-xl">Core Skills </h1>
-            <span> - </span>
-            <p className="text-lg">
-              HTML, CSS, Bootstrap, Tailwind, JavaScript, TypeScript, React,
-              Redux, React Query, NextJs
-            </p>
-          </div>
-          <div className="flex">
-            {" "}
-            <h1 className="text-xl">Moderate Skills </h1> <span> - </span>
-            <p className="text-lg">
-              Vue, Nodejs, Express, MongoDB, Firebase, React Native
-            </p>
-          </div>
-          <div className="flex">
-            <h1 className="text-xl">Other Skills </h1> <span> - </span>
-            <p className="text-lg"> VS Code, Git</p>
+          <div className="grid md:grid-cols-2 sm:grid-cols-1">
+            <div>
+              {" "}
+              <h1 className="text-xl">Core Skills</h1>
+              {/* <p className="text-lg">
+                HTML, CSS, Bootstrap, Tailwind, JavaScript, TypeScript, React,
+                Redux, React Query, NextJs
+              </p> */}
+              <ul className="text-lg">
+                {skills?.data?.data[0] &&
+                  skills?.data?.data[0]?.core?.map((item: any) => (
+                    <li>{item}</li>
+                  ))}
+              </ul>
+            </div>
+            <div>
+              {" "}
+              <h1 className="text-xl">Moderate Skills </h1>
+              <ul className="text-lg">
+                {skills?.data?.data[0] &&
+                  skills?.data?.data[0]?.moderate?.map((item: any) => (
+                    <li>{item}</li>
+                  ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

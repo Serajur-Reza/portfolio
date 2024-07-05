@@ -1,20 +1,23 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home";
 import App from "../App";
+import BlogsPage from "../pages/Blogs";
+import SingleBlog from "../pages/Blogs/SingleBlog";
+import SingleProject from "../pages/Projects/SingleProject";
 
 export const router = createBrowserRouter([
   { path: "/", element: <App />, children: [{ path: "", element: <Home /> }] },
   {
-    path: "/blog",
+    path: "/blogs",
     element: <App />,
     children: [
-      { path: "", element: <h2>single blog</h2> },
-      { path: ":id", element: <h2>double blog</h2> },
+      { path: "", element: <BlogsPage /> },
+      { path: ":id", element: <SingleBlog /> },
     ],
   },
   {
     path: "/projects",
     element: <App />,
-    children: [{ path: ":id", element: <h2>double project</h2> }],
+    children: [{ path: ":id", element: <SingleProject /> }],
   },
 ]);

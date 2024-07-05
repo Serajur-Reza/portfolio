@@ -1,19 +1,20 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [state, setState] = useState(false);
 
   // Replace javascript:void(0) paths with your paths
   const navigation = [
-    { title: "Blogs", path: "javascript:void(0)" },
-    { title: "Projects", path: "javascript:void(0)" },
-    { title: "Experience", path: "javascript:void(0)" },
+    { title: "Blogs" },
+    { title: "Projects" },
+    { title: "Experience" },
     // { title: "Pricing", path: "javascript:void(0)" },
   ];
 
   return (
-    <nav className="bg-white border-b w-full md:static md:text-sm md:border-none bg-gray-200 py-5">
+    <nav className="bg-white border-b w-full md:static md:text-sm md:border-none bg-gray-100 py-5">
       <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
           {/* <a href="javascript:void(0)">
@@ -73,7 +74,19 @@ const Navbar = () => {
                   key={idx}
                   className="text-gray-700 hover:text-indigo-600 text-lg"
                 >
-                  <Link to={item.path} className="block">
+                  {/* <Link to={item.path} className="block">
+                    {item.title}
+                  </Link> */}
+                  <Link
+                    activeClass="active"
+                    to={item.title}
+                    // spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                    className="cursor-pointer"
+                    // onSetActive={handleSetActive}
+                  >
                     {item.title}
                   </Link>
                 </li>

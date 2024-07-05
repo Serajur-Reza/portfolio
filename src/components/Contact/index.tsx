@@ -38,15 +38,7 @@ const Contact = () => {
                 />
               </div>
 
-              <button
-                className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-md"
-                onClick={() =>
-                  window.open(
-                    "https://drive.google.com/file/d/1tGXYPTncfP4u3jv0RVUcBWslpCo1YH4k/view",
-                    "_blank"
-                  )
-                }
-              >
+              <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-md">
                 Send Message
               </button>
             </div>
@@ -56,10 +48,7 @@ const Contact = () => {
                 <div
                   className="mt-4 bg-blue-600 text-white p-3 rounded-lg cursor-pointer"
                   onClick={() =>
-                    window.open(
-                      "https://drive.google.com/file/d/1tGXYPTncfP4u3jv0RVUcBWslpCo1YH4k/view",
-                      "_blank"
-                    )
+                    window.open("https://github.com/Serajur-Reza", "_blank")
                   }
                 >
                   <FaGithub />{" "}
@@ -68,7 +57,7 @@ const Contact = () => {
                   className="mt-4 bg-blue-600 text-white p-3 rounded-lg cursor-pointer"
                   onClick={() =>
                     window.open(
-                      "https://drive.google.com/file/d/1tGXYPTncfP4u3jv0RVUcBWslpCo1YH4k/view",
+                      "https://www.linkedin.com/in/serajurreza/",
                       "_blank"
                     )
                   }

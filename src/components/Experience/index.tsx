@@ -3,7 +3,6 @@ import { useGetExperiences } from "../../queryHooks/expereience/useGetExperience
 
 const Experience = () => {
   const { data: experiences } = useGetExperiences();
-  console.log(experiences);
   return (
     <>
       <div className="container mx-auto px-4 my-8  animate-fade">
@@ -20,7 +19,6 @@ const Experience = () => {
             </h1>
             <h3 className="text-lg font-semibold">{item?.designation}</h3>
             <h3 className="text-lg ">{item?.description}</h3>
-            <p>description</p>
           </div>
         ))}
       </div>

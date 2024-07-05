@@ -6,6 +6,8 @@ import Intro from "../../components/Intro";
 import Projects from "../../components/Projects";
 import Skills from "../../components/Skills";
 
+import { Element } from "react-scroll";
+
 const Home = () => {
   return (
     <>
@@ -15,11 +17,19 @@ const Home = () => {
         </Grid> */}
       <Intro />
       <About />
-      <Experience />
+      <Element name="Experience" className="element">
+        <Experience />
+      </Element>
+
       <Skills />
 
-      <Projects />
-      <Blogs />
+      <Element name="Projects" className="element">
+        <Projects />
+      </Element>
+
+      <Element name="Blogs" className="element">
+        <Blogs />
+      </Element>
 
       <Contact />
     </>

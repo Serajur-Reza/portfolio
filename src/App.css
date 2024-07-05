@@ -40,3 +40,10 @@
 .read-the-docs {
   color: #888;
 } */
+
+.blog-text {
+  height: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

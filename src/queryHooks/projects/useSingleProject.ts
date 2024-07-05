@@ -2,19 +2,19 @@ import axios from "axios";
 import { useQuery } from "react-query";
 import { live_url } from "../../constants/urls";
 
-export const useGetProjects = () => {
+export const useSingleProject = (id: string) => {
   //   const queryClient = useQueryClient();
   const result = useQuery({
-    queryKey: ["projects"],
-    queryFn: () => getProjects(),
+    queryKey: ["project"],
+    queryFn: () => getSingleProject(id),
   });
 
   return result;
 };
 
-const getProjects = async () => {
+const getSingleProject = async (id: string) => {
   try {
-    const res = await axios.get(`${live_url}/projects`);
+    const res = await axios.get(`${live_url}/projects/${id}`);
     return res;
   } catch (error) {
     console.log(error);
