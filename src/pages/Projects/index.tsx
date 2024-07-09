@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { useGetProjects } from "../../queryHooks/projects/useGetProject";
 
-const Projects = () => {
+const ProjectsPage = () => {
   const { data: projects } = useGetProjects();
+
   return (
     <>
       <div className="container mx-auto px-4 my-8  animate-fade">
@@ -14,7 +15,7 @@ const Projects = () => {
           <div className="grid gap-x-8 gap-y-10 mt-16 sm:grid-cols-2 lg:grid-cols-3">
             {" "}
             {projects?.data?.data?.length &&
-              projects?.data?.data?.slice(0, 6)?.map((item: any) => (
+              projects?.data?.data?.map((item: any) => (
                 <div className="w-full mx-auto group sm:max-w-sm">
                   <Link to={`/projects/${item?._id}`}>
                     <img
@@ -38,16 +39,9 @@ const Projects = () => {
               ))}{" "}
           </div>
         </div>
-        <div className="mt-5 flex justify-center">
-          <Link to="/projects">
-            <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-md">
-              See More
-            </button>
-          </Link>
-        </div>
       </div>
     </>
   );
 };
 
-export default Projects;
+export default ProjectsPage;

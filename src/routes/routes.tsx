@@ -4,6 +4,7 @@ import App from "../App";
 import BlogsPage from "../pages/Blogs";
 import SingleBlog from "../pages/Blogs/SingleBlog";
 import SingleProject from "../pages/Projects/SingleProject";
+import ProjectsPage from "../pages/Projects";
 
 export const router = createBrowserRouter([
   { path: "/", element: <App />, children: [{ path: "", element: <Home /> }] },
@@ -18,6 +19,9 @@ export const router = createBrowserRouter([
   {
     path: "/projects",
     element: <App />,
-    children: [{ path: ":id", element: <SingleProject /> }],
+    children: [
+      { path: "", element: <ProjectsPage /> },
+      { path: ":id", element: <SingleProject /> },
+    ],
   },
 ]);
