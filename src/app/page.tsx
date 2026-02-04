@@ -28,6 +28,14 @@ export default function HomePage() {
             <Button asChild variant="outline" size="lg">
               <Link href="/contact">Get In Touch</Link>
             </Button>
+            <Button asChild size="lg" className="group">
+              <Link
+                href="https://drive.google.com/file/d/1_TUkmEOjf71e6fBvoHD_oWhjZiL8UIYS/view"
+                target="_blank"
+              >
+                Resume
+              </Link>
+            </Button>
           </div>
 
           <div className="flex items-center gap-6">
@@ -47,14 +55,6 @@ export default function HomePage() {
             >
               <Linkedin className="h-6 w-6" />
             </Link>
-            {/* <Link
-              href="https://twitter.com"
-              className="text-muted-foreground hover:text-primary transition-colors"
-              aria-label="Twitter"
-              target="_blank"
-            >
-              <Blog className="h-6 w-6" />
-            </Link> */}
           </div>
         </div>
       </div>
